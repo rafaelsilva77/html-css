@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(123, 255, 255);
+
+        }
+        fieldset {
+            background-image: linear-gradient(to right,rgb(0, 188, 235),rgb(0, 107, 134));
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+        }
+
+        form {
+            font-weight: bolder;
+        }
+        legend {
+            transform: translatey(-6px);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.342);
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="imail">Email:</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="itel">Telenofe:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\d{4,5}-\d{4}$" required>
+            </p>
+            </fieldset>
+            <!-- Estudar mais sobre RegEx -->
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        
+    </form>
+</body>
+</html>
